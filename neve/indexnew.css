@@ -1,0 +1,161 @@
+/* header  */
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px;
+}
+
+.lists {
+    display: flex;
+    gap: 15px;
+}
+
+li {
+    list-style: none;
+}
+
+/* body  */
+.container {
+    background-color: rgb(25, 25, 105);
+    height: 100vh;
+    display: flex;
+
+}
+
+
+img {
+    height: 80vh;
+    position: relative;
+    left: 150px;
+}
+
+.down {
+    display: flex;
+    margin-top: 100px;
+    /* gap: 50%; */
+}
+
+.section {
+    width: 500px;
+    padding: 100px;
+    color: white;
+
+}
+
+.hero {
+    font-size: 4rem;
+}
+
+
+
+.btn1 {
+    background-color: white;
+    color: blue;
+    font-size: 30px;
+    justify-content: flex-start;
+}
+
+.btn2 {
+    background-color: blue;
+    color: white;
+    font-size: 30px;
+}
+
+/* .column {
+      position: relative;
+      top: -100px;
+      bottom: 200px;
+      left: 60px;
+      font-size: 80px;
+    } */
+
+.colunm {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.primary {
+    /* display: flex; */
+    margin: 20px;
+}
+
+.primary p {
+    padding: 0 20px;
+    font-size: 20px;
+}
+
+
+/* featured */
+.secondary {
+    text-align: center;
+}
+
+.feature {
+    padding-top: 80px;
+    font-size: large;
+}
+
+
+
+.images {
+    position: relative;
+    left: -300px;
+    display: flex;
+    gap: 200px;
+    padding-top: 80px;
+
+}
+
+
+img {
+    border-radius: 20px;
+    align-items: center;
+}
+
+.red {
+    padding-top: 150px;
+    margin-top: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: rgb(25, 29, 39);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+img {
+    border-radius: 20px;
+    margin-top: 80px;
+}
+
+.blue {
+
+    width: 500px;
+    height: 100px;
+    text-align: center;
+}
+
+.green {
+    margin-top: 100px;
+}
+
+.yellow {
+    /* width: : 100px; */
+    margin-top: 100px;
+    padding: 200px;
+    background-color: rgb(23, 23, 124);
+    color: white;
+    text-align: center;
+}
+
+.btn {
+    color: blue;
+    size: 100px;
+}
