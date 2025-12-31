@@ -6,7 +6,7 @@
 .header {
   background-color: #44bef114;
 }
-.head {
+.nav-head {
   display: flex;
   justify-content: space-between;
   font-size: larger;
@@ -28,15 +28,17 @@
 .header1 h1 {
   font-size: 40px;
 }
+nav{
+  background-color: #323946;
+
+}
 .navbr {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* width: 85%;
-  margin: auto; */
-  padding-top: 1%;
-  background-color: #323946;
-  padding: 20px 85px;
+  width: 87%;
+  margin: auto;
+  padding: 20px 0;
   margin-top: 20px;
 }
 .links {
@@ -45,7 +47,6 @@
   align-items: center;
   width: 85%;
   margin: auto;
-  margin-left: 2%;
 }
 .links a {
   text-decoration: none;
@@ -178,6 +179,9 @@
   margin: auto;
   padding-top: 70px;
   gap: 50px;
+}
+.facts-header{
+  display: flex;
 }
 .head {
   display: flex;
@@ -474,19 +478,16 @@
   width: 85%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .sec-4 h2 {
-  font-size: 35px;
+  /* font-size: 35px; */
   font-family: sans-serif;
   color: whitesmoke;
+  width: 50%;
 }
 .sec-4 i {
   color: #44bef1;
-}
-.sec-4 input {
-  padding: 19px 140px;
-  border: none;
-  outline: none;
 }
 .sec-4 button {
   padding: 15px 40px;
@@ -592,4 +593,13 @@
   font-weight: lighter;
   gap: 30px;
   color: #ddd;
+}
+
+.footer-form{
+  display: flex;
+}
+.footer-form input{
+  width: 400px;
+  outline: none;
+  padding: 0 10px;
 }
