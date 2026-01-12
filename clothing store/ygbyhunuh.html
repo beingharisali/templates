@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pretty Gal - Fashion Store</title>
+    <!-- Font awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #fdfbf7;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Top Shipping Bar */
+        .shipping-bar {
+            background-color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 13px;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #eee;
+            position: relative;
+        }
+
+        .login-btn {
+            position: absolute;
+            right: 40px;
+            top: 10px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: #3d3935;
+            /* Dark brownish grey from image */
+            color: white;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            font-size: 14px;
+        }
+
+        .logo {
+            font-size: 24px;
+            letter-spacing: 3px;
+            font-weight: 400;
+        }
+
+        .nav-icons {
+            display: flex;
+            gap: 20px;
+            font-size: 18px;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background-color: #e5d9cc;
+            /* Beige color */
+            background-image: url('https://static.wixstatic.com/media/84770f_c3a3a4bbad7144d89b51485ea65b532d~mv2.jpeg/v1/fill/w_1336,h_780,al_t,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/84770f_c3a3a4bbad7144d89b51485ea65b532d~mv2.jpeg');
+            /* Replace with your image */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-text {
+            margin-left: 80px;
+            max-width: 400px;
+        }
+
+        .hero-text h1 {
+            font-size: 50px;
+            font-weight: 300;
+            color: #3d3935;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .hero-btn {
+            background-color: #3d3935;
+            color: white;
+            padding: 12px 40px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Best Sellers Section */
+        .best-sellers {
+            padding: 80px 50px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 32px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .section-subtitle {
+            font-style: italic;
+            margin-bottom: 50px;
+            color: #666;
+        }
+
+        .product-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .product-card {
+            flex: 1;
+            max-width: 400px;
+            text-align: left;
+        }
+
+        .img-container {
+            position: relative;
+            margin-bottom: 15px;
+        }
+
+        .product-img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+        }
+
+        .badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: #8fb8c0;
+            /* Blue badge color from screenshot */
+            color: white;
+            padding: 5px 12px;
+            font-size: 13px;
+        }
+
+        .product-info h3 {
+            font-weight: 300;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .product-info p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .shop-all-btn {
+            background-color: #3d3935;
+            color: white;
+            padding: 12px 40px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #3d3935;
+            color: white;
+            padding: 80px 50px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1.5fr;
+            gap: 40px;
+        }
+
+        .footer-logo {
+            font-size: 30px;
+            grid-column: 1 / span 3;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 25px;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        .footer-col input {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid white;
+            color: white;
+            padding: 10px 0;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            gap: 10px;
+            font-size: 12px;
+            margin-bottom: 20px;
+        }
+
+        .subscribe-btn {
+            background-color: #ccc;
+            color: #3d3935;
+            width: 100%;
+            padding: 15px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+            font-size: 18px;
+        }
+
+        .contact-info {
+            margin-top: 50px;
+        }
+
+        /* Floating Chat Icon */
+        .chat-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #666;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Shipping Bar -->
+    <div class="shipping-bar">
+        FREE SHIPPING WORLDWIDE
+        <div class="login-btn">
+            <i class="far fa-user-circle"></i> Log In
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-links">
+            <a href="#">Shop</a>
+            <a href="#">Sale</a>
+            <a href="#">Customer Care</a>
+            <a href="#">Stores</a>
+        </div>
+        <div class="logo">PRETTY GAL</div>
+        <div class="nav-icons">
+            <i class="far fa-heart"></i>
+            <i class="fas fa-shopping-bag"></i> 0
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>NEW COLLECTION</h1>
+            <button class="hero-btn">Shop Now</button>
+        </div>
+    </section>
+
+    <!-- Best Sellers -->
+    <section class="best-sellers">
+        <h2 class="section-title">Our Best Sellers</h2>
+        <p class="section-subtitle">Don't Miss Out</p>
+
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="img-container">
+                    <div class="badge">Best Seller</div>
+                    <img src="https://static.wixstatic.com/media/91bf6bd01bb1497da1e6aea1abb5ac11.jpg/v1/fill/w_398,h_531,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/91bf6bd01bb1497da1e6aea1abb5ac11.jpg"
+                        alt="Product" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h3>I'm a Product</h3>
+                    <p>$15.99</p>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="img-container">
+                    <div class="badge">Best Seller</div>
+                    <img src="https://static.wixstatic.com/media/11062b_9926db4dbbdc4ada9c73cd0cdf4c3f40~mv2_d_3024_3024_s_4_2.jpg/v1/fill/w_398,h_531,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_9926db4dbbdc4ada9c73cd0cdf4c3f40~mv2_d_3024_3024_s_4_2.jpg"
+                        alt="Product" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h3>I'm a Product</h3>
+                    <p>$14.99</p>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="img-container">
+                    <div class="badge">Best Seller</div>
+                    <img src="https://static.wixstatic.com/media/50390fbbe5144db988f0d86a24d9fcd8.jpg/v1/fill/w_398,h_531,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/50390fbbe5144db988f0d86a24d9fcd8.jpg"
+                        alt="Product" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h3>I'm a Product</h3>
+                    <p>$14.99</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="shop-all-btn">Shop Best Sellers</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logo">PRETTY GAL</div>
+
+        <div class="footer-col">
+            <h4>OUR STORE</h4>
+            <ul>
+                <li>Shop</li>
+                <li>Sale</li>
+                <li>Customer Care</li>
+                <li>Stores</li>
+            </ul>
+            <div class="contact-info">
+                <h4>NEED ASSISTANCE?</h4>
+                <ul>
+                    <li>123-456-7890</li>
+                    <li>info@mysite.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h4>TERMS & CONDITIONS</h4>
+            <ul>
+                <li>Terms & Conditions</li>
+                <li>Privacy Policy</li>
+                <li>Shipping Policy</li>
+                <li>Refund Policy</li>
+                <li>Accessibility Statement</li>
+            </ul>
+            <div class="contact-info">
+                <h4>STAY CONNECTED</h4>
+                <div class="social-icons">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-tiktok"></i>
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h4>BE OUR FRIEND</h4>
+            <p style="font-size: 14px; margin-bottom: 10px;">Enter Your Email Here *</p>
+            <input type="email">
+            <div class="checkbox-group">
+                <input type="checkbox" style="width: auto; margin: 0;">
+                <span>Yes, subscribe me to your newsletter. *</span>
+            </div>
+            <button class="subscribe-btn">Subscribe Now</button>
+        </div>
+    </footer>
+
+    <!-- Chat Widget Icon -->
+    <div class="chat-icon">
+        <i class="far fa-comment-alt"></i>
+    </div>
+
+</body>
+
+</html>
