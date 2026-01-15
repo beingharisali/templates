@@ -14,7 +14,7 @@ body {
 
 
 .serif-title {
-    font-family: 'Playfair Display', serif;
+
     font-size: 32px;
     letter-spacing: 2px;
     font-weight: 400;
@@ -84,14 +84,13 @@ footer {
     background-color: rgb(61, 57, 53);
     color: white;
     padding: 80px 50px;
-    margin-top: 100px;
     display: grid;
     grid-template-columns: 1fr 1fr 1.5fr;
     gap: 40px;
     font-family: Madefor, Helvetica Neue, Helvetica, Arial, meiryo, hiragino kaku gothic pro, sans-serif;
 }
 
-.footer-logo {
+.footer-box {
     font-size: 30px;
     grid-column: 1 / span 3;
     margin-bottom: 40px;
@@ -99,19 +98,19 @@ footer {
 
 }
 
-.footer-col h4 {
+.footer-column-box h4 {
     margin-bottom: 25px;
     font-size: 14px;
     letter-spacing: 1px;
 }
 
-.footer-col ul li {
+.footer-column-box ul li {
     margin-bottom: 12px;
     font-size: 14px;
     color: white;
 }
 
-.footer-col input {
+.footer-column-box input {
     background: transparent;
     border: none;
     border-bottom: 1px solid white;
@@ -121,7 +120,7 @@ footer {
     margin-bottom: 20px;
 }
 
-.checkbox-group {
+.checking {
     display: flex;
     gap: 10px;
     font-size: 12px;
@@ -129,8 +128,8 @@ footer {
     background-color: transparent;
 }
 
-.subscribe-btn {
-    background-color: rgb(204, 204, 204);
+.now {
+    background-color: white;
     color: rgb(61, 57, 53);
     width: 50%;
     padding: 15px;
@@ -139,14 +138,14 @@ footer {
     cursor: pointer;
 }
 
-.social-icons {
+.internet {
     margin-top: 20px;
     display: flex;
     gap: 15px;
     font-size: 18px;
 }
 
-.contact-info {
+.contact-information {
     margin-top: 50px;
 }
 
@@ -155,7 +154,7 @@ footer {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: darkgray;
+    background-color: rgb(102, 102, 102);
     color: white;
     width: 50px;
     height: 50px;
